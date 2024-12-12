@@ -1,0 +1,26 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+       classpath 'com.google.gms.google-services4.4.2' 
+    }
+
+    // Set the build directory for all projects
+    rootProject.buildDir = "../build"
+    subprojects {
+        project.buildDir = "${rootProject.buildDir}/${project.name}"
+    }
+
+    // Ensure all subprojects depend on the evaluation of the ":app" project
+    subprojects {
+        project.evaluationDependsOn(":app")
+    }
+}
+
+// Task to clean the build directory
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

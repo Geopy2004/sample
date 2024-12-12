@@ -1,0 +1,53 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+
+    // Add the Google Services Gradle plugin
+    id "com.google.gms.google-services"
+}
+
+android {
+    namespace = "com.flash.reddays"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.flash.reddays"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:33.6.0')
+
+    // Add the Firebase Analytics dependency
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Add other Firebase dependencies as needed
+    // For example: implementation 'com.google.firebase:firebase-auth'
+    // Reference: https://firebase.google.com/docs/android/setup#available-libraries
+}

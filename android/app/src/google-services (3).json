@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "669280958958",
+    "project_id": "aeither-d5e8c",
+    "storage_bucket": "aeither-d5e8c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669280958958:android:a790219abc65f8240ff6ff",
+        "android_client_info": {
+          "package_name": "com.flash.reddays"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd9L7-oHfA6pGnnw8SO6Y9BHOyFZ6WIUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
